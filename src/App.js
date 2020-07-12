@@ -18,10 +18,10 @@ const app = new Clarifai.App({
 const particleOptions = {
       "particles": {
         "number": {
-            "value": 50,
+            "value": 40,
             'density': {
               enable: true,
-              value_area: 300
+              value_area: 200
             }
         }
       },
@@ -158,7 +158,6 @@ class App extends Component {
         <Navigation isSignedIn= {isSignedIn} onRouteChange= {this.onRouteChange}/>
         {route === 'home' 
         ? <div > 
-            <Logo/> 
             <Rank name ={user.name} entries ={user.entries}/>
             <ImageLinkForm onInputChange = { this.onInputChange } onDetectButton={ this.onDetectButton } />
             <FaceRecognition imageURL = {imageURL} box = {box}/> 
