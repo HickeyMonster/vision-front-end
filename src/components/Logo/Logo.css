@@ -2,8 +2,14 @@
     background: linear-gradient(135deg,  #12c2e9, #c471ed, #f64f59);
     display: flex;
     justify-content: flex-start;
-    height: 100px;
-    width: 100px;
+    padding: 6px;
+    height: 100%;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+
+.Tilt img {
+    height: 100%;
 }
 
 

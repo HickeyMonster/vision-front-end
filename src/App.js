@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 import Particles from 'react-particles-js';
 import Clarifai from 'clarifai';
-import Navigation from './components/Navigation/Navigation';
-import Logo from './components/Logo/Logo';
+import Navigation from './components/Navigation/NavigationItems';
 import ImageLinkForm from './components/ImageLinkform/ImageLinkForm';
 import Rank from './components/Rank/Rank';
 import FaceRecognition from './components/FaceRecognition/FaceRecognition';
 import SignIn from './components/SignIn/SignIn';
 import Registration from './components/Registration/Registration';
 import './App.css';
+import Layout from './components/Layout/Layout';
 
 // When using an API key that isn't free or lets say we want to hide it, we move it to the back-end.
 const app = new Clarifai.App({
@@ -154,20 +154,22 @@ class App extends Component {
     const { isSignedIn, imageURL, route,  box, user} = this.state;
     return(
       <div className="tc">
-        <Particles className="particles" params={ particleOptions } />
-        <Navigation isSignedIn= {isSignedIn} onRouteChange= {this.onRouteChange}/>
-        {route === 'home' 
-        ? <div > 
-            <Rank name ={user.name} entries ={user.entries}/>
-            <ImageLinkForm onInputChange = { this.onInputChange } onDetectButton={ this.onDetectButton } />
-            <FaceRecognition imageURL = {imageURL} box = {box}/> 
-          </div>
-        : (
-          this.state.route === 'signin'
-          ? <SignIn loadUser = {this.loadUser} onRouteChange= {this.onRouteChange } />
-          : <Registration onRouteChange= {this.onRouteChange} loadUser = { this.loadUser } />
-          )  
-        }   
+        <Layout>
+          <Particles className="particles" params={ particleOptions } />
+          <Navigation isSignedIn= {isSignedIn} onRouteChange= {this.onRouteChange}/>
+          {route === 'home' 
+           ?<div > 
+              <Rank name ={user.name} entries ={user.entries}/>
+              <ImageLinkForm onInputChange = { this.onInputChange } onDetectButton={ this.onDetectButton } />
+              <FaceRecognition imageURL = {imageURL} box = {box}/> 
+            </div>
+           :(
+            this.state.route === 'signin'
+            ? <SignIn loadUser = {this.loadUser} onRouteChange= {this.onRouteChange } />
+            : <Registration onRouteChange= {this.onRouteChange} loadUser = { this.loadUser } />
+            )  
+          }  
+        </Layout> 
       </div>
     );
   }
