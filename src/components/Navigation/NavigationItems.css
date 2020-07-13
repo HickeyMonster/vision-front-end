@@ -6,6 +6,7 @@
     flex-direction: row;
     align-items: center;
     height: 100%;
+    cursor: pointer;
 }
 
 /* @media(min-width:500px){

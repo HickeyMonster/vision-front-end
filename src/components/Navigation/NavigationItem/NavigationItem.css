@@ -1,5 +1,5 @@
 .NavigationItem{
-    margin: 10px 0;
+    margin: 8px 10px;
     box-sizing: border-box;
     display: block;
     align-items: center;
@@ -7,35 +7,10 @@
 }
 
 .NavigationItem p{
-    color: black;
+    color: white;
     text-decoration: none;
     width: 100%;
     box-sizing: border-box;
     display: block;
     text-decoration: underline;
-}
-
-
-@media (min-width: 500px){
-    .NavigationItem{
-        margin: 0;
-        display: flex;
-        align-items: center;
-        height: 100%;
-        width: auto;
-    }
-    
-    .NavigationItem p{
-        color: white;
-        height: 100%;
-        padding: 12px 10px;
-        border-bottom: 2px solid transparent;
-    }
-    
-    .NavigationItem p:hover,
-    .NavigationItem p:active,
-    .NavigationItem p.active{
-        border-bottom: 2px solid #40A4C8;
-        color: white;
-    }
 }

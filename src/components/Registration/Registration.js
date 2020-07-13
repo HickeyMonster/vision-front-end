@@ -84,7 +84,7 @@ class Registration extends React.Component {
                 />
               </div>
             </fieldset>
-            <div className="">
+            <div>
               <input
                 onClick={this.onSubmitSignIn}
                 className="b ph3 pv2 input-reset ba b--black bg-transparent grow pointer f6 dib"
@@ -92,6 +92,10 @@ class Registration extends React.Component {
                 value="Register"
               />
             </div>
+            <div className="lh-copy mt3">
+                        <span className= 'no-underline'>Already have an account?</span>
+                        <p onClick={()=>this.props.onRouteChange('register')} className="f6 b link dim black db pointer underline ">Register</p>
+                        </div>
           </div>
         </main>
       </article>

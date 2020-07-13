@@ -1,9 +1,10 @@
 import React from 'react';
+import './Rank.css';
 
 
 const Rank = ({name, entries}) => {
     return(
-        <div style={{fontFamily: 'Source Sans Pro sans-serif'}}>
+        <div className = 'Rank'>
              <div className = 'black f2 mb3'>
                 { `Welcome, ${name}`}
              </div>

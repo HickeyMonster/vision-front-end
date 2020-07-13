@@ -5,15 +5,8 @@ import  './NavigationItems.css';
 const NavigationItems = ({ navRouter, loggedIn}) =>{
   if(loggedIn){
     return(
-  <ul className = {'NavigationItems'}>
-      <NavigationItem onClick={()=>navRouter('signin')}>Sign Out</NavigationItem>
-  </ul>
-    );
-  }else {
-    return(
       <ul className = {'NavigationItems'}>
-      <NavigationItem onClick={ ()=>navRouter('register')}>Register</NavigationItem>
-      <NavigationItem onClick={ ()=>navRouter('signin')}>Sign In</NavigationItem>
+          <NavigationItem clicked={navRouter}>Sign Out</NavigationItem>
       </ul>
     );
   }
