@@ -61,6 +61,7 @@ class Registration extends React.Component {
                   type="text"
                   name="name"
                   id="name"
+                  required
                   onChange={this.onNameChange}
                 />
               </div>
@@ -71,6 +72,7 @@ class Registration extends React.Component {
                   type="email"
                   name="email-address"
                   id="email-address"
+                  required
                   onChange={this.onEmailChange}
                 />
               </div>
@@ -81,6 +83,7 @@ class Registration extends React.Component {
                   type="password"
                   name="password"
                   id="password"
+                  required
                   onChange={this.onPasswordChange}
                 />
               </div>

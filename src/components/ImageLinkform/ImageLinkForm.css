@@ -12,3 +12,11 @@ background-size: 70px 120px;
 .Font{
     font-family: monospace;
 }
+
+
+@media(min-width:500px){
+    .Font{
+        font-size: 1.5rem;
+    }
+
+}
