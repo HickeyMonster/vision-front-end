@@ -125,27 +125,7 @@ class App extends Component {
     }
     this.setState({route: route})
   }
-  // onSubmitRegistration =() =>{
-  //   fetch('https://mysterious-inlet-58186.herokuapp.com/register', {
-  //       method: 'post',
-  //       headers: {'Content-Type': 'application/json'},
-  //       body: JSON.stringify({
-  //           email: this.state.regEmail,
-  //           password: this.state.regPassword,
-  //           name: this.state.regName,
-  //       })
-  //   })
-  //   .then(response => response.json())
-  //   .then(user =>{
-  //       if(user.id){
-  //           this.loadUser(user);
-  //           this.onRouteChange('home');  
-  //       }
-  //       console.log(user);
-  //  })
-  //  .catch(err => console.log('error!'));
-  // }
-
+  
   render(){
     const { isSignedIn, imageURL, route,  box, user} = this.state;
     return(
