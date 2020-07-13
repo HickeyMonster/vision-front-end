@@ -8,8 +8,14 @@ const NavigationItems = ({ navRouter, loggedIn}) =>{
       <ul className = {'NavigationItems'}>
           <NavigationItem clicked={navRouter}>Sign Out</NavigationItem>
       </ul>
-    );
-  }
+    )
+  }else{
+    return(
+  <ul className = {'NavigationItems'}>
+             <NavigationItem clicked={navRouter}>Sign In</NavigationItem>
+         </ul>
+    )
+}
 }
 
 export default NavigationItems; 

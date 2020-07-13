@@ -4,7 +4,7 @@ import './ImageLinkForm.css';
 const ImageLinkForm = ({onInputChange, onDetectButton}) => {
     return(
        <div className = 'Image-form'>
-          <p className = 'f6 black Font'>
+          <p className = 'f5 black Font'>
               {'Copy and paste the URL of any image below and see vision at work!'}
           </p>
           <div className= 'center'>

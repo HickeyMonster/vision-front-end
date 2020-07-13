@@ -48,6 +48,7 @@ class Registration extends React.Component {
 
   render() {
     return (
+      <div className ="Register">
       <article className="br3 ba b--black-10 mv4 w-100 w-50-m w-25-l mw6 shadow-5 center">
         <main className="pa4 black-80">
           <div className="measure">
@@ -94,11 +95,12 @@ class Registration extends React.Component {
             </div>
             <div className="lh-copy mt3">
                         <span className= 'no-underline'>Already have an account?</span>
-                        <p onClick={()=>this.props.onRouteChange('register')} className="f6 b link dim black db pointer underline ">Register</p>
+                        <p onClick={()=>this.props.onRouteChange('signin')} className="f6 b link dim black db pointer underline ">Sign In</p>
                         </div>
           </div>
         </main>
       </article>
+      </div>
     );
   }
 }

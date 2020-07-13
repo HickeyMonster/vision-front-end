@@ -7,7 +7,9 @@ const Layout = (props) => {
         <div> 
         <Toolbar  signedInState= {props.isSignedIn} routeChange= {props.onRouteChange}/>
             <main className={'mainSpacing'}>
-                {props.children}
+                <div className="main">
+                 {props.children}
+                </div>
             </main>
         </div>
  );
