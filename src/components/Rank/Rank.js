@@ -3,7 +3,7 @@ import React from 'react';
 
 const Rank = ({name, entries}) => {
     return(
-        <div style={{fontFamily: 'cursive'}}>
+        <div style={{fontFamily: 'Source Sans Pro sans-serif'}}>
              <div className = 'black f2 mb3'>
                 { `Welcome, ${name}`}
              </div>

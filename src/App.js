@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import Particles from 'react-particles-js';
 import Clarifai from 'clarifai';
-import Navigation from './components/Navigation/NavigationItems';
 import ImageLinkForm from './components/ImageLinkform/ImageLinkForm';
 import Rank from './components/Rank/Rank';
 import FaceRecognition from './components/FaceRecognition/FaceRecognition';
@@ -52,9 +51,6 @@ const initialState = {
     entries: 0,
     joined: ''
   },
-  // regEmail: '',
-  // regPassword: '',
-  // regName:''
 }
 
 class App extends Component {
@@ -154,9 +150,8 @@ class App extends Component {
     const { isSignedIn, imageURL, route,  box, user} = this.state;
     return(
       <div className="tc">
-        <Layout>
+        <Layout  isSignedIn= {isSignedIn} onRouteChange= {this.onRouteChange}>
           <Particles className="particles" params={ particleOptions } />
-          <Navigation isSignedIn= {isSignedIn} onRouteChange= {this.onRouteChange}/>
           {route === 'home' 
            ?<div > 
               <Rank name ={user.name} entries ={user.entries}/>

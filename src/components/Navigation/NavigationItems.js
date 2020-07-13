@@ -2,18 +2,18 @@ import React from 'react';
 import NavigationItem from './NavigationItem/NavigationItem';
 import  './NavigationItems.css';
 
-const NavigationItems = ({ onRouteChange, isSignedIn}) =>{
-  if(isSignedIn){
+const NavigationItems = ({ navRouter, loggedIn}) =>{
+  if(loggedIn){
     return(
   <ul className = {'NavigationItems'}>
-      <NavigationItem onClick={()=>onRouteChange('signin')}>Sign Out</NavigationItem>
+      <NavigationItem onClick={()=>navRouter('signin')}>Sign Out</NavigationItem>
   </ul>
     );
   }else {
     return(
       <ul className = {'NavigationItems'}>
-      <NavigationItem onClick={ ()=>onRouteChange('register')}>Register</NavigationItem>
-      <NavigationItem onClick={ ()=>onRouteChange('signin')}>Sign In</NavigationItem>
+      <NavigationItem onClick={ ()=>navRouter('register')}>Register</NavigationItem>
+      <NavigationItem onClick={ ()=>navRouter('signin')}>Sign In</NavigationItem>
       </ul>
     );
   }

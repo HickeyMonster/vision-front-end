@@ -8,3 +8,7 @@ linear-gradient(60deg, rgba(0,0,0,.1) 25%, transparent 25%, transparent 75%, rgb
 linear-gradient(120deg, rgba(0,0,0,.1) 25%, transparent 25%, transparent 75%, rgba(0,0,0,.1) 75%, rgba(0,0,0,.1));
 background-size: 70px 120px;
 }
+
+.Font{
+    font-family: monospace;
+}

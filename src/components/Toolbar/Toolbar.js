@@ -1,15 +1,15 @@
 import React from 'react';
-import Logo from '../../Logo/Logo';
+import Logo from '../Logo/Logo';
 import  './Toolbar.css';
 import NavigationItems from '../NavigationItems/NavigationItems';
 
-const Toolbar = ({toggleSideDrawer}) =>{
+const Toolbar = ({signedInState, routeChange}) =>{
     
     return(
        <header className = {'Toolbar'}>
                <Logo/>
            <nav>
-               <NavigationItems/>
+               <NavigationItems navRouter ={routeChange} loggedIn= {signedInState} />
            </nav>
        </header>
     );

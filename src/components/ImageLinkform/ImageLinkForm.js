@@ -4,8 +4,8 @@ import './ImageLinkForm.css';
 const ImageLinkForm = ({onInputChange, onDetectButton}) => {
     return(
        <div className = 'ma4 mt0'>
-          <p className = 'f4 black' style={{fontFamily: 'cursive'}}>
-              {'Vision will detect faces in any image. Give it a try!'}
+          <p className = 'f4 black Font'>
+              {'Vision will detect faces in any image. Just copy and paste the URL of any image below. Give it a try!'}
           </p>
           <div className= 'center'>
               <div className= 'form center pa4 br3 shadow-5'>
