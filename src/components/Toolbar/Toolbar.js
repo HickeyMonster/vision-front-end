@@ -1,7 +1,7 @@
 import React from 'react';
 import Logo from '../Logo/Logo';
 import  './Toolbar.css';
-import NavigationItems from '../NavigationItems/NavigationItems';
+import NavigationItems from '../Navigation/NavigationItems';
 
 const Toolbar = ({signedInState, routeChange}) =>{
     
